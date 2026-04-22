@@ -8,12 +8,13 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from uuid import uuid4
 from typing import List, Dict, Optional
+from typing import Any
 
 # Estrutura de uma mensagem
 @dataclass
 class Message:
     role: str
-    content: str
+    content: Any # Saiu de str para Any para aceitar listas de blocos
     # Usamos uma função anônima (lambda) para gerar a data/hora exata do momento da criação
     timestamp: str = field(default_factory=lambda: datetime.utcnow().isoformat())
 

@@ -4,13 +4,13 @@ Função que controi o system prompt final combinando base + fragmentos.
 """
 
 from typing import Optional, Dict, Any
-from app import ALBERT_BASE_SYSTEM_PROMPT
-from app import (
+from app.prompts.base import ALBERT_BASE_SYSTEM_PROMPT
+from app.prompts.fragments import (
     REASONING_TRANSPARENCY_FRAGMENT,
     PHYSICS_EXAMPLES_FRAGMENT,
     RAG_CONTEXT_FRAGMENT,
     CONSCIOUSNESS_FRAGMENT,
-    TOOL_USAGE_FRAGMENT
+    TOOL_USAGE_FRAGMENT,
 )
 
 def build_system_prompt(
@@ -20,7 +20,7 @@ def build_system_prompt(
     include_rag_context: bool = False,
     rag_context: Optional[str] = None,
     include_consciousness: bool = False,
-    consciousness_data: Optional[Dict[str, Any]] = None,
+    consciousness_data: Optional[Dict[str,Any]] = None,
 ) -> str:
 
     # Monta o System Prompt final de forma modular.

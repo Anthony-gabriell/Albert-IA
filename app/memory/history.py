@@ -7,7 +7,7 @@ quando necessário e exporta o histórico para formatos úteis.
 
 from typing import List, Dict, Optional
 from datetime import datetime
-from app import Session
+from app.core.session import Session
 
 class ConversationHistory:
     def __init__(self, session: Session):

@@ -8,8 +8,8 @@ import json
 from pathlib import Path
 from typing import List, Optional
 from datetime import datetime
-from app import Session, Message
-from app import settings
+from app.core.session import Session, Message
+from app.core.config import settings
 
 
 class SessionStore:
