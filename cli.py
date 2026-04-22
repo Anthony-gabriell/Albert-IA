@@ -11,7 +11,7 @@ from rich.text import Text
 from app.core.agent import AlbertAgent
 
 # Constantes de configuração da CLI
-APP_NAME = "Albert Anthony"
+APP_NAME = "Albert I.A"
 APP_VERSION = "v0.1"
 COMMANDS = {
     "/reset": "Limpa o histórico e inicia nova sessão",
