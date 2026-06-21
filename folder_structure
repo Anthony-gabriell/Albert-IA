@@ -1,0 +1,101 @@
+# Albert I.A. Estrutura de Pastas
+
+> **O que é este arquivo:** mapa de leitura da árvore de diretórios do Albert IA, traduzido e anotado. É o seu projeto pessoal — co-piloto de física teórica.
+
+---
+
+## Resumo técnico
+
+Projeto Python 3.12 puro, estruturado como aplicação CLI que sobe um servidor FastAPI/Uvicorn. O pacote `app/` separa responsabilidades de forma limpa entre percepção (retrieval), memória, raciocínio e ação (tools), exposto via API e acessível via CLI.
+
+| Pasta / arquivo         | Propósito                                                                 | Papel no projeto de unificação |
+|--------------------------|----------------------------------------------------------------------------|----------------------------------|
+| `cli.py`                | Ponto de entrada via linha de comando
+| `main.py`               | Entrada principal da aplicação (FastAPI/Uvicorn)
+| `app/api/`              | Camada HTTP / API (rotas, endpoints)
+| `app/consciousness/`    | Módulos de auto-modelagem, consciência
+| `app/core/`             | Utilitários fundamentais, config, classes base
+| `app/memory/`           | Memória de curto/longo prazo, vectorstore
+| `app/prompts/`          | Templates e engenharia de prompt
+| `app/reasoning/`        | Componentes lógicos / inferência
+| `app/retrieval/`        | Utilitários de busca/recuperação de dados
+| `app/tools/`            | Skills/ferramentas chamáveis pelo agente
+| `data/corpus/`          | Corpora de conhecimento bruto (mechanics, quantum, relativity)
+| `data/sessions/`        | Logs de conversas/sessões salvas
+| `data/vectorstore/`     | Embeddings / índices FAISS ou Chroma
+| `docs/`                 | Documentação (markdown, diagramas)
+| `notebooks/`            | Jupyter notebooks para experimentação
+| `scripts/`              | Scripts auxiliares / deploy
+| `tests/`                | Suíte de testes
+| `requirements.txt`      | Dependências pip
+| `projeto_completo.txt`  | Especificação/notas detalhadas
+
+---
+
+## Árvore completa de diretórios
+
+```
+ALBERT I.A/
+├── ALBERT I.A.zip                # cópia arquivada do projeto inteiro
+├── cli.py                        # ponto de entrada CLI
+├── main.py                       # entrada principal (FastAPI/Uvicorn)
+├── .env                          # variáveis de ambiente (overrides locais)
+├── .env.example                  # template de .env
+├── .gitignore
+├── pyproject.toml                # metadados de build/dependências (placeholder vazio)
+├── README.md                     # visão geral do projeto (vazio atualmente)
+├── requirements.txt              # dependências pip
+├── projeto_completo.txt          # especificação/notas detalhadas
+│
+├── app/                          # pacote Python principal — IDENTIDADE DO ALBERT
+│   ├── __init__.py
+│   ├── __pycache__/
+│   ├── api/                      # camada HTTP / API
+│   │   └── __init__.py
+│   ├── consciousness/            # auto-modelagem, consciência
+│   │   └── __init__.py
+│   ├── core/                     # utilitários fundamentais, config, classes base
+│   │   ├── __init__.py
+│   │   └── __pycache__/
+│   ├── memory/                   # memória curto/longo prazo, vectorstore
+│   │   ├── __init__.py
+│   │   └── __pycache__/
+│   ├── prompts/                  # templates de prompt — "voz" do Albert
+│   │   ├── __init__.py
+│   │   └── __pycache__/
+│   ├── reasoning/                # componentes lógicos / inferência
+│   │   └── __init__.py
+│   ├── retrieval/                # busca/recuperação de dados externos
+│   │   └── __init__.py
+│   └── tools/                    # skills chamáveis pelo agente
+│       ├── __init__.py
+│       └── __pycache__/
+│
+├── data/                         # armazenamento persistente
+│   ├── corpus/                   # corpora de conhecimento — específico de física
+│   │   ├── mechanics/
+│   │   ├── quantum/
+│   │   └── relativity/
+│   ├── sessions/                 # logs de conversas/sessões
+│   └── vectorstore/               # embeddings / FAISS / Chroma
+│
+├── docs/                         # documentação
+├── notebooks/                    # Jupyter notebooks de experimentação
+├── scripts/                      # scripts auxiliares / deploy
+│
+├── tests/                        # suíte de testes
+│   └── __init__.py
+│
+├── .git/                         # metadados do Git
+├── .idea/                        # config de IDE JetBrains
+├── __pycache__/                  # bytecode dos arquivos Python de topo
+│
+└── .venv/                        # ambiente virtual Python isolado
+    ├── bin/
+    ├── include/
+    └── lib/
+        └── python3.12/
+            └── site-packages/    # (omitido)
+```
+
+---
