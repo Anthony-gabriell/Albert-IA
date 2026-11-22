@@ -4,8 +4,8 @@ Função que controi o system prompt final combinando base + fragmentos.
 """
 
 from typing import Optional, Dict, Any
-from app.prompts.base import ALBERT_BASE_SYSTEM_PROMPT
-from app.prompts.fragments import (
+from albert_identity.prompts.base import ALBERT_BASE_SYSTEM_PROMPT
+from albert_identity.prompts.fragments import (
     REASONING_TRANSPARENCY_FRAGMENT,
     PHYSICS_EXAMPLES_FRAGMENT,
     RAG_CONTEXT_FRAGMENT,
